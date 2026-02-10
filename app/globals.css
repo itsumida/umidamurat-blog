@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@900&display=swap');
+
+:root {
+  --background: #f4f1e8;
+  --foreground: #000;
+  --link: #16a34a;
+  --code-bg: #e8e3d8;
+  --border: #d9d4c9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #222;
+    --foreground: #d3d3d3;
+    --link: #4ade80;
+    --code-bg: #1e1e1e;
+    --border: #444;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Merriweather', 'Georgia', serif;
+  line-height: 1.75;
+  font-size: 100%;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 1.75rem 0;
+}
+
+h2 {
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-size: 1.73rem;
+  margin: 1.75rem 0;
+}
+
+h3 {
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-size: 1.44rem;
+  margin: 1.75rem 0;
+}
+
+h4 {
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1.75rem 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code highlighting styles */
+pre {
+  background: #2d2d2d !important;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+pre code {
+  color: #d3d3d3;
+  background: transparent;
+}
+
+:not(pre) > code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  margin: 1.75rem 0;
+  color: #2f4f4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    color: grey;
+  }
+}
+
+/* Lists */
+ul, ol {
+  margin: 1.75rem 0;
+  padding-left: 1.75rem;
+}
+
+/* Prose styles */
+.prose {
+  max-width: 65ch;
+}
+
+.prose a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
